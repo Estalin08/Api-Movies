@@ -7,7 +7,7 @@ object RetrofitInstance {
 
     val api: ApiService by lazy {
         Retrofit.Builder()
-            .baseUrl("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")
+            .baseUrl("https://jsonplaceholder.typicode.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
