@@ -1,3 +1,4 @@
 package com.er.apimovies.model
 
-data class dataApi()
+data class dataApi(val id: Int
+)
