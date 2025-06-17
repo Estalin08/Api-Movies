@@ -1,4 +1,4 @@
-package com.er.apimovies
+package com.er.apimovies.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.er.apimovies.model.dataModels
 import com.er.apimovies.viewModel.PostViewModel
@@ -18,7 +19,7 @@ import com.er.apimovies.viewModel.PostViewModel
 
 
 @Composable
-fun view(viewModel: PostViewModel = viewModel()) {
+fun view(viewModel: PostViewModel = viewModel(), navController: NavController) {
     val movies by viewModel.movies
 
     LazyColumn(
@@ -51,3 +52,4 @@ fun MovieItem(movie: dataModels) {
             }
         }
 }
+
